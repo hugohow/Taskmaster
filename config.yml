@@ -1,0 +1,34 @@
+---
+nginx:
+  cmd: "node /Users/hugohow-choong/Taskmaster/timer.js"
+  numprocs: 1
+  umask: '022'
+  workingdir: "/Users/"
+  autostart: true
+  autorestart: true
+  exitcodes:
+  - 0
+  - 2
+  startretries: 3
+  starttime: 1
+  stopsignal: SIGTERM
+  stoptime: 10
+  stdout: "/Users/hugohow-choong/Taskmaster/logs/nginx.stdout"
+  stderr: "/Users/hugohow-choong/Taskmaster/logs/nginx.stderr"
+  env:
+    STARTED_BY: taskmaster
+    ANSWER: 42
+vogsphere:
+  cmd: "sleep 10"
+  numprocs: 3
+  umask: '077'
+  workingdir: "/Users/hugohow-choong/Taskmaster"
+  autostart: true
+  autorestart: unexpected
+  exitcodes: 0
+  startretries: 10
+  starttime: 10
+  stopsignal: USR1
+  stoptime: 10
+  stdout: "/Users/hugohow-choong/Taskmaster/logs/vgsworker.stdout"
+  stderr: "/Users/hugohow-choong/Taskmaster/logs/vgsworker.stderr"

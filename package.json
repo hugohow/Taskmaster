@@ -1,0 +1,25 @@
+{
+  "name": "taskmaster",
+  "version": "1.0.0",
+  "description": "taskmaster typescript",
+  "main": "index.js",
+  "scripts": {
+    "test": "jest",
+    "server": "node src/daemon.js",
+    "app": "node src/index.js",
+    "start": "npm run server && npm run app",
+    "clean": "rm -rf node_modules && npm install",
+    "kill": "killall -9 node"
+  },
+  "author": "hugohow",
+  "license": "ISC",
+  "dependencies": {
+    "fs": "0.0.1-security",
+    "http": "0.0.0",
+    "js-yaml": "^3.12.1",
+    "os": "^0.1.1"
+  },
+  "devDependencies": {
+    "jest": "^24.1.0"
+  }
+}
