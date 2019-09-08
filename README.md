@@ -67,7 +67,7 @@ status
 ```
 Get all process status info.
 
-<img src="status.png" alt="status" />
+<img src="status.png" width="400" alt="status" />
 
 ```
 shutdown
